@@ -14,7 +14,7 @@ const Navbar = () => {
     }
 
 	return (
-        <div className="flex items-center">
+        <div className="flex items-center w-screen">
 		<div className="ml-5">
 			<img src={google} className="w-30 h-20" alt="Google News" />
 		</div>
