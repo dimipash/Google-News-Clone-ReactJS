@@ -2,12 +2,18 @@ import { signInWithPopup } from "firebase/auth";
 import google from "../assets/google.png";
 import lens from "../assets/lens.png";
 import { auth, googleProvider } from "../firebase/setup";
+import account from "../assets/account.png";
+import Profile from "./Profile";
+import { useState } from "react";
 
 type searchProp = {
 	setSearch: any;
 };
 
 const Navbar = (props: searchProp) => {
+
+	const [profile, setProfile] = useState(false);
+
 	const googleSignin = async () => {
 		try {
 			await signInWithPopup(auth, googleProvider);
@@ -30,12 +36,26 @@ const Navbar = (props: searchProp) => {
 					className="bg-zinc-100 ml-4 w-6/12 outline-none"
 				/>
 			</div>
-			<button
-				onClick={googleSignin}
-				className="ml-44 bg-blue-600 text-white p-2 w-28 rounded-md"
-			>
-				Sign in
-			</button>
+			{auth?.currentUser ? (
+				<img
+					src={
+						auth?.currentUser?.photoURL
+							? auth?.currentUser?.photoURL
+							: account
+					}
+					onClick={() => setProfile(true)}
+					className="rounded-full w-9 h-9 ml-60 cursor-pointer"
+					alt="Account"
+				/>
+			) : (
+				<button
+					onClick={googleSignin}
+					className="ml-44 bg-blue-600 text-white p-2 w-28 rounded-md"
+				>
+					Sign in
+				</button>
+			)}
+			{profile && <Profile setProfile={setProfile} />}
 		</div>
 	);
 };
