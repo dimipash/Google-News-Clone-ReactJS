@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import News from "./News";
 import moment from "moment";
+import { toast } from "react-toastify";
 
 const Main = () => {
 	const [news, setNews] = useState([]);
@@ -32,7 +33,7 @@ const Main = () => {
 
 	return (
 		<div className="bg-gray-100">
-			<Navbar setSearch={setSearch} />
+			<Navbar setSearch={setSearch} toast={toast} />
 			<Menubar setMenu={setMenu} />
 			<div className="bg-gray-100 pt-5 w-screen">
 				<h1 className="ml-28 text-3xl">Your briefing</h1>
