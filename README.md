@@ -1,8 +1,8 @@
-# Google News Clone (Work in Progress)
+# Google News Clone
 
-This is a work-in-progress React-based application that aims to replicate the core functionality of the Google News platform. It is being built using Vite, TypeScript, Tailwind CSS, and Firebase.
+This is a completed React-based application that replicates the core functionality of the Google News platform. It was built using Vite, TypeScript, Tailwind CSS, and Firebase.
 
-## Features (Planned)
+## Features
 
 - Fetch news articles from various sources using the NewsAPI
 - Display news articles in a grid-like layout
@@ -19,3 +19,32 @@ This is a work-in-progress React-based application that aims to replicate the co
 - Tailwind CSS (for responsive and customizable styling)
 - Firebase (for user authentication and data storage)
 - NewsAPI (for fetching news articles)
+
+## Project Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/dimipash/Google-News-Clone-ReactJS.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd google-news-clone
+```
+
+3. Install dependencies:
+```bash
+npm install
+```
+
+4. Set up Firebase:
+   - Create a new Firebase project on the Firebase Console.
+   - Enable the necessary authentication and Firestore services.
+   - Copy the Firebase configuration details and update the `src/firebase.ts` file.
+
+5. Start the development server:
+```bash
+npm run dev
+```
+
+6. Open your web browser and visit `http://localhost:5173` to see the application.
