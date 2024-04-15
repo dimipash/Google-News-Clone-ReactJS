@@ -11,6 +11,22 @@ This is a completed React-based application that replicates the core functionali
 - Provide a detailed view for each news article, including the full content, author, and publication date
 - Utilize Firebase for user authentication, allowing users to save their favorite articles
 
+## Screenshots
+
+Here are some screenshots of the Google News Clone application:
+
+**Home Page**
+
+![Home Page](google-news-clone/src/screenshots/landing.jpg)
+
+**Google Login**
+
+![Article Details](google-news-clone/src/screenshots/login.jpg)
+
+**Logged In**
+
+![Search and Filtering](google-news-clone/src/screenshots/loggedin.jpg)
+
 ## Technologies Used
 
 - React.js
