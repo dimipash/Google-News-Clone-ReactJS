@@ -56,7 +56,7 @@ npm install
 4. Set up Firebase:
    - Create a new Firebase project on the Firebase Console.
    - Enable the necessary authentication and Firestore services.
-   - Copy the Firebase configuration details and update the `src/firebase.ts` file.
+   - Copy the Firebase configuration details and update the file.
 
 5. Start the development server:
 ```bash
